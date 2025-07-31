@@ -1,0 +1,79 @@
+[INFO] [1753423917.719775919] [cartesian_pose_client]: Waiting for move_group action server...
+[INFO] [1753423918.230776877] [cartesian_pose_client]: Sending offset pose [-0.2040000000, -0.2130000000, 0.6860000000]
+[INFO] [1753423923.688902555] [cartesian_pose_client]: Pose goal succeeded!
+[INFO] [1753423923.689018357] [cartesian_pose_client]: Motion duration: 5.458 seconds
+[INFO] [1753423924.189180385] [cartesian_pose_client]: Actual EE Position: [-0.2040009409, -0.2129920754, 0.6860161713]
+[INFO] [1753423924.189659652] [cartesian_pose_client]: Actual EE Orientation (Quaternion): [x=0.9999999999, y=0.0000005057, z=-0.0000012697, w=0.0000147075]
+[INFO] [1753423924.189719242] [cartesian_pose_client]: Error EE Position: [9.4090394143e-07, 7.9246187580e-06, 1.6171303162e-05]
+[INFO] [1753423924.189753005] [cartesian_pose_client]: Error EE Orientation (Quaternion): [x=1.0908918213e-10, y=5.0572891525e-07, z=1.2697088777e-06, w=1.4707494711e-05]
+[INFO] [1753423931.654811508] [cartesian_pose_client]: Pose goal succeeded!
+[INFO] [1753423931.654919417] [cartesian_pose_client]: Motion duration: 5.463 seconds
+[INFO] [1753423932.156463014] [cartesian_pose_client]: Actual EE Position: [-0.2039966584, -0.5130073359, 0.3860027914]
+[INFO] [1753423932.156590395] [cartesian_pose_client]: Actual EE Orientation (Quaternion): [x=1.0000000000, y=-0.0000024778, z=0.0000000955, w=0.0000039828]
+[INFO] [1753423932.156632357] [cartesian_pose_client]: Error EE Position: [3.3415794745e-06, 7.3359483214e-06, 2.7913546395e-06]
+[INFO] [1753423932.156659779] [cartesian_pose_client]: Error EE Orientation (Quaternion): [x=1.1005751865e-11, y=2.4778456549e-06, z=9.5544448201e-08, w=3.9828120248e-06]
+[INFO] [1753423934.156853254] [cartesian_pose_client]: Sending offset pose [-0.2040000000, -0.2130000000, 0.8860000000]
+[INFO] [1753423941.144873694] [cartesian_pose_client]: Pose goal succeeded!
+[INFO] [1753423941.144984310] [cartesian_pose_client]: Motion duration: 6.988 seconds
+[INFO] [1753423941.645698475] [cartesian_pose_client]: Actual EE Position: [-0.2040016297, -0.2130036273, 0.8860054175]
+[INFO] [1753423941.646595360] [cartesian_pose_client]: Actual EE Orientation (Quaternion): [x=1.0000000000, y=0.0000024448, z=0.0000000600, w=0.0000014081]
+[INFO] [1753423941.646670091] [cartesian_pose_client]: Error EE Position: [1.6296587468e-06, 3.6272524952e-06, 5.4175270706e-06]
+[INFO] [1753423941.646708151] [cartesian_pose_client]: Error EE Orientation (Quaternion): [x=3.9817038555e-12, y=2.4448404147e-06, z=5.9956599547e-08, w=1.4080590730e-06]
+[INFO] [1753423950.644331495] [cartesian_pose_client]: Pose goal succeeded!
+[INFO] [1753423950.644462336] [cartesian_pose_client]: Motion duration: 6.997 seconds
+[INFO] [1753423951.144609192] [cartesian_pose_client]: Actual EE Position: [-0.2039955648, -0.5129943932, 0.3859823014]
+[INFO] [1753423951.144969315] [cartesian_pose_client]: Actual EE Orientation (Quaternion): [x=0.9999999999, y=-0.0000019452, z=0.0000008034, w=-0.0000140547]
+[INFO] [1753423951.145693168] [cartesian_pose_client]: Error EE Position: [4.4351763223e-06, 5.6067715520e-06, 1.7698585701e-05]
+[INFO] [1753423951.145754200] [cartesian_pose_client]: Error EE Orientation (Quaternion): [x=1.0098144543e-10, y=1.9452172850e-06, z=8.0340417895e-07, w=1.4054665412e-05]
+[INFO] [1753423953.145946664] [cartesian_pose_client]: Sending offset pose [-0.5040000000, -0.2130000000, 0.3860000000]
+[INFO] [1753423958.340055468] [cartesian_pose_client]: Pose goal succeeded!
+[INFO] [1753423958.340154010] [cartesian_pose_client]: Motion duration: 5.194 seconds
+[INFO] [1753423958.840298059] [cartesian_pose_client]: Actual EE Position: [-0.5040081344, -0.2130006333, 0.3860051110]
+[INFO] [1753423958.841462080] [cartesian_pose_client]: Actual EE Orientation (Quaternion): [x=1.0000000000, y=-0.0000043004, z=-0.0000044264, w=0.0000043001]
+[INFO] [1753423958.841838741] [cartesian_pose_client]: Error EE Position: [8.1343955848e-06, 6.3325303018e-07, 5.1109573780e-06]
+[INFO] [1753423958.842051197] [cartesian_pose_client]: Error EE Orientation (Quaternion): [x=2.8288926757e-11, y=4.3004463305e-06, z=4.4264455104e-06, w=4.3000718263e-06]
+[INFO] [1753423966.034627055] [cartesian_pose_client]: Pose goal succeeded!
+[INFO] [1753423966.034727700] [cartesian_pose_client]: Motion duration: 5.192 seconds
+[INFO] [1753423966.534875480] [cartesian_pose_client]: Actual EE Position: [-0.2039941580, -0.5130086097, 0.3860041755]
+[INFO] [1753423966.534976429] [cartesian_pose_client]: Actual EE Orientation (Quaternion): [x=1.0000000000, y=0.0000029733, z=0.0000002339, w=0.0000054174]
+[INFO] [1753423966.535007639] [cartesian_pose_client]: Error EE Position: [5.8420344007e-06, 8.6097237297e-06, 4.1754767551e-06]
+[INFO] [1753423966.535032217] [cartesian_pose_client]: Error EE Orientation (Quaternion): [x=1.9121482175e-11, y=2.9733135952e-06, z=2.3386448580e-07, w=5.4173546276e-06]
+[INFO] [1753423968.535229136] [cartesian_pose_client]: Sending offset pose [0.0960000000, -0.2130000000, 0.3860000000]
+[INFO] [1753423976.436297801] [cartesian_pose_client]: Pose goal succeeded!
+[INFO] [1753423976.436414803] [cartesian_pose_client]: Motion duration: 7.901 seconds
+[INFO] [1753423976.936583203] [cartesian_pose_client]: Actual EE Position: [0.0959946488, -0.2129981050, 0.3859927943]
+[INFO] [1753423976.936707238] [cartesian_pose_client]: Actual EE Orientation (Quaternion): [x=1.0000000000, y=0.0000038555, z=-0.0000030084, w=-0.0000010616]
+[INFO] [1753423976.936747796] [cartesian_pose_client]: Error EE Position: [5.3511692624e-06, 1.8950209541e-06, 7.2057238171e-06]
+[INFO] [1753423976.936774422] [cartesian_pose_client]: Error EE Orientation (Quaternion): [x=1.2521095272e-11, y=3.8554824070e-06, z=3.0083994255e-06, w=1.0615994076e-06]
+[INFO] [1753423986.818824779] [cartesian_pose_client]: Pose goal succeeded!
+[INFO] [1753423986.818932773] [cartesian_pose_client]: Motion duration: 7.882 seconds
+[INFO] [1753423987.319076692] [cartesian_pose_client]: Actual EE Position: [-0.2040070964, -0.5130057378, 0.3860038073]
+[INFO] [1753423987.319211351] [cartesian_pose_client]: Actual EE Orientation (Quaternion): [x=1.0000000000, y=-0.0000022573, z=0.0000002366, w=0.0000053508]
+[INFO] [1753423987.319266519] [cartesian_pose_client]: Error EE Position: [7.0964314024e-06, 5.7378245418e-06, 3.8073248347e-06]
+[INFO] [1753423987.319306660] [cartesian_pose_client]: Error EE Orientation (Quaternion): [x=1.6891377186e-11, y=2.2573012642e-06, z=2.3661475805e-07, w=5.3508415812e-06]
+[INFO] [1753423989.319513473] [cartesian_pose_client]: Sending offset pose [0.0960000000, -0.5130000000, 0.6860000000]
+[INFO] [1753423994.499473595] [cartesian_pose_client]: Pose goal succeeded!
+[INFO] [1753423994.499626513] [cartesian_pose_client]: Motion duration: 5.180 seconds
+[INFO] [1753423994.999779372] [cartesian_pose_client]: Actual EE Position: [0.0960082505, -0.5130028456, 0.6860072538]
+[INFO] [1753423994.999915960] [cartesian_pose_client]: Actual EE Orientation (Quaternion): [x=1.0000000000, y=0.0000008761, z=0.0000020177, w=0.0000028426]
+[INFO] [1753423994.999959113] [cartesian_pose_client]: Error EE Position: [8.2504589230e-06, 2.8456145206e-06, 7.2538280537e-06]
+[INFO] [1753423994.999989673] [cartesian_pose_client]: Error EE Orientation (Quaternion): [x=6.4593885796e-12, y=8.7607271010e-07, z=2.0176922741e-06, w=2.8425974536e-06]
+[INFO] [1753424002.189873113] [cartesian_pose_client]: Pose goal succeeded!
+[INFO] [1753424002.189976223] [cartesian_pose_client]: Motion duration: 5.190 seconds
+[INFO] [1753424002.690119042] [cartesian_pose_client]: Actual EE Position: [-0.2040056729, -0.5129914746, 0.3859846769]
+[INFO] [1753424002.690259885] [cartesian_pose_client]: Actual EE Orientation (Quaternion): [x=0.9999999999, y=-0.0000029709, z=0.0000003939, w=-0.0000122730]
+[INFO] [1753424002.690315384] [cartesian_pose_client]: Error EE Position: [5.6728743639e-06, 8.5253844713e-06, 1.5323093006e-05]
+[INFO] [1753424002.690355832] [cartesian_pose_client]: Error EE Orientation (Quaternion): [x=7.9803608166e-11, y=2.9709458681e-06, z=3.9392528636e-07, w=1.2272959953e-05]
+[INFO] [1753424004.690571836] [cartesian_pose_client]: Sending offset pose [0.0960000000, -0.5130000000, 0.6860000000]
+[INFO] [1753424009.873559445] [cartesian_pose_client]: Pose goal succeeded!
+[INFO] [1753424009.873660705] [cartesian_pose_client]: Motion duration: 5.183 seconds
+[INFO] [1753424010.373955089] [cartesian_pose_client]: Actual EE Position: [0.0960063198, -0.5130024974, 0.6860086631]
+[INFO] [1753424010.374122813] [cartesian_pose_client]: Actual EE Orientation (Quaternion): [x=1.0000000000, y=-0.0000002891, z=0.0000029070, w=0.0000050995]
+[INFO] [1753424010.374176424] [cartesian_pose_client]: Error EE Position: [6.3198470609e-06, 2.4974062053e-06, 8.6631061051e-06]
+[INFO] [1753424010.374204876] [cartesian_pose_client]: Error EE Orientation (Quaternion): [x=1.7269630170e-11, y=2.8906184313e-07, z=2.9070312004e-06, w=5.0994977265e-06]
+[INFO] [1753424017.566682215] [cartesian_pose_client]: Pose goal succeeded!
+[INFO] [1753424017.566793951] [cartesian_pose_client]: Motion duration: 5.192 seconds
+[INFO] [1753424018.066964642] [cartesian_pose_client]: Actual EE Position: [-0.2040050470, -0.5129919950, 0.3859861084]
+[INFO] [1753424018.067095273] [cartesian_pose_client]: Actual EE Orientation (Quaternion): [x=0.9999999999, y=-0.0000013294, z=0.0000009329, w=-0.0000108587]
+[INFO] [1753424018.067141722] [cartesian_pose_client]: Error EE Position: [5.0470235371e-06, 8.0049555936e-06, 1.3891557282e-05]
+[INFO] [1753424018.067178649] [cartesian_pose_client]: Error EE Orientation (Quaternion): [x=6.0274341074e-11, y=1.3293636333e-06, z=9.3294432074e-07, w=1.0858686409e-05]

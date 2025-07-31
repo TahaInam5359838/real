@@ -1,0 +1,10 @@
+# Limits for the Pilz planner
+robot_description_planning:
+  cartesian_limits:
+    max_trans_vel: 1.0
+    max_trans_acc:  1.5
+    max_trans_dec: -1.5
+    max_rot_vel: 1.57
+
+# min distance for no accelartion limits is vel^2/acc
+# since robot arm is almost never moving over 
