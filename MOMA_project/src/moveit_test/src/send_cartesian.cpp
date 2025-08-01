@@ -113,6 +113,30 @@ public:
     return displacements;
   }
 
+  // Generate a set of displacements that create a 'random' path
+  std::vector<std::vector<double>> get_random_path() {
+    std::vector<std::vector<double>> displacements;
+
+    displacements.push_back({ 0.0, 0.0, 0.0 });
+    displacements.push_back({ 0.0, -0.4, 0.0 });
+    displacements.push_back({ -0.4, -0.5, 0.0 });
+    displacements.push_back({ 0.0, -0.4, 0.0 });
+    displacements.push_back({ 0.4, -0.5, 0.0 });
+    displacements.push_back({ 0.0, 0.0, -0.3 });
+    return displacements;
+  }
+
+  std::vector<std::vector<double>> get_random_path2() {
+    std::vector<std::vector<double>> displacements;
+
+    displacements.push_back({ 0.0, 0.0, 0.0 });
+    displacements.push_back({ 0.0, 0.0, -0.2 });
+    displacements.push_back({ 0.0, -0.5, 0.0 });
+    displacements.push_back({ 0.0, 0.0, 0.0 });
+
+    return displacements;
+  }
+
   // Send the goal motions
   void send_cartesian_goal() {
     RCLCPP_INFO(get_logger(), "Waiting for move_group action server...");
@@ -128,10 +152,11 @@ public:
     target_pose_ = start_pose; // Store for error checking later
 
     // Generate the target displacements
-    double rad = 200; // mm
-    std::vector<std::vector<double>> displacements = get_spherical_path(rad /= 1000);
+    // double rad = 300; // mm
+    // std::vector<std::vector<double>> displacements = get_spherical_path(rad /= 1000);
+    std::vector<std::vector<double>> displacements = get_random_path();
 
-    csv_file_.open("results_200mm_1.5ms2_2.csv");
+    csv_file_.open("results_random_0.5ms2_3.csv");
     csv_file_ << "desired_x,desired_y,desired_z,"
               << "actual_x,actual_y,actual_z,"
               << "error_x,error_y,error_z,time\n";  
@@ -139,7 +164,7 @@ public:
     int i = 0;
     for (const auto& disp : displacements) {
       RCLCPP_INFO(this->get_logger(), "Sending pose %.10d", i);
-      i++;
+      
       geometry_msgs::msg::PoseStamped offset_pose = start_pose;
       offset_pose.pose.position.x += disp[0];
       offset_pose.pose.position.y += disp[1];
@@ -155,11 +180,52 @@ public:
       send_pose_goal(offset_pose, csv_file_);
       rclcpp::sleep_for(2s);  // Wait for execution and TF update
 
-      RCLCPP_INFO(this->get_logger(), "Going home");
+      // RCLCPP_INFO(this->get_logger(), "Going home");
 
-      send_pose_goal(start_pose, csv_file_);  // Return to start
-      rclcpp::sleep_for(2s);
+      // send_pose_goal(start_pose, csv_file_);  // Return to start
+      // rclcpp::sleep_for(2s);
+
+      i++;
     }
+
+    RCLCPP_INFO(this->get_logger(), "Changing orientation on next movement from now");
+
+    tf2::Quaternion q(1, 0, 0, 0);
+    q.normalize();
+    start_pose.pose.orientation.x = q.x();
+    start_pose.pose.orientation.y = q.y();
+    start_pose.pose.orientation.z = q.z();
+    start_pose.pose.orientation.w = q.w();
+
+    displacements = get_random_path2();
+
+    for (const auto& disp : displacements) {
+      RCLCPP_INFO(this->get_logger(), "Sending pose %.10d", i);
+      
+      geometry_msgs::msg::PoseStamped offset_pose = start_pose;
+      offset_pose.pose.position.x += disp[0];
+      offset_pose.pose.position.y += disp[1];
+      offset_pose.pose.position.z += disp[2];
+
+      RCLCPP_INFO(this->get_logger(), "Sending offset pose [%.10f, %.10f, %.10f]",
+                  offset_pose.pose.position.x,
+                  offset_pose.pose.position.y,
+                  offset_pose.pose.position.z);
+
+      // Add coords to csv
+
+      send_pose_goal(offset_pose, csv_file_);
+      rclcpp::sleep_for(2s);  // Wait for execution and TF update
+
+      // RCLCPP_INFO(this->get_logger(), "Going home");
+
+      // send_pose_goal(start_pose, csv_file_);  // Return to start
+      // rclcpp::sleep_for(2s);
+
+      i++;
+    }
+
+
     csv_file_.close();
   }
 
