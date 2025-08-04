@@ -34,7 +34,7 @@ def generate_launch_description():
 
     robot_description = {'robot_description' : robot_description_config}
 
-    print(robot_description_config)
+    # print(robot_description_config)
 
     vis_config = get_package_share_directory('amr_visualisation') + "/param/vis_param.yaml"
 
