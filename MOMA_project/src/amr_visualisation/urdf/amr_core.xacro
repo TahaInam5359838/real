@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<robot name="AMR_Platform"
+  xmlns:xacro="http://www.ros.org/wiki/xacro">
+  <!-- COLOURS -->
+  <material name="amr_body_color">
+    <color rgba="0.5 0.4 0.9 1.0"/>
+  </material>
+
+  <material name="amr_wheel_color">
+    <color rgba="0.1 0.2 0.0 1.0"/>
+  </material>
+
+  <!-- BASE LINK -->
+  <link name="base_link">
+    <static>true</static>
+  </link>
+  
+  <link name="amr_main_body">
+    <visual>
+      <origin rpy="0 0 3.1415926535897" xyz="0 0 -0.085"/>
+      <geometry>
+        <mesh filename="package://amr_visualisation/meshes/LD250.obj"/>
+      </geometry>
+      <material name="white"/>
+    </visual>
+
+    <collision>
+      <origin rpy="0 0 3.1415926535897" xyz="0 0 -0.085"/>
+      <geometry>
+        <mesh filename="package://amr_visualisation/meshes/LD250.obj"/>
+      </geometry>
+      <material name="white"/>
+    </collision>
+   
+    <inertial>
+      <mass value="10000.07"/>
+      <origin rpy="0 0 0" xyz="-0.03 0 0"/>
+      <inertia ixx="0.426" ixy="0.0" ixz="0.0" iyy="0.496" iyz="0.0" izz="0.91"/>
+    </inertial>
+
+  </link>
+
+  <joint name="main_body_to_base" type="fixed">
+    <parent link="base_link"/>
+    <child link="amr_main_body"/>
+    <origin xyz="0 0 0.15"/>
+  </joint>
+
+</robot>

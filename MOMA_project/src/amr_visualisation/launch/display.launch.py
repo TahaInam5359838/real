@@ -3,9 +3,13 @@ import sys
 import yaml
 import json
 from launch import LaunchDescription
-from launch.substitutions import Command
+from launch.substitutions import Command, LaunchConfiguration
+from launch.actions import DeclareLaunchArgument
+from launch.conditions import IfCondition
 from launch_ros.actions import Node
 from ament_index_python.packages import get_package_share_directory
+
+import xacro
 
 def load_file(package_name, file_path):
     package_path = get_package_share_directory(package_name)
@@ -22,8 +26,15 @@ def generate_launch_description():
     #robot_description_config = load_file('amr_visualisation', 'urdf/AMR_Platform.urdf')
     # robot_description_config = load_file('amr_visualisation', 'urdf/LD90.urdf')
     robot_description_config = load_file('amr_visualisation', 'urdf/LD250.urdf')
+
+    pkg_path = os.path.join(get_package_share_directory('amr_visualisation'))
+    xacro_file = os.path.join(pkg_path,'urdf','robot.urdf.xacro')
+    robot_description_config = xacro.process_file(xacro_file)
+    robot_description_config = robot_description_config.toxml()
+
     robot_description = {'robot_description' : robot_description_config}
-    #print(robot_description_config)
+
+    print(robot_description_config)
 
     vis_config = get_package_share_directory('amr_visualisation') + "/param/vis_param.yaml"
 
@@ -97,7 +108,16 @@ def generate_launch_description():
         output='screen',
     )
 
+    # publish joint states
+    joint_state_slider = Node(
+        package='joint_state_publisher_gui',
+        executable='joint_state_publisher_gui',
+        name='joint_state_publisher_gui',
+        condition=IfCondition(LaunchConfiguration('gui'))
+    )
+
     return LaunchDescription([
+        DeclareLaunchArgument('gui', default_value='false', description='Use joint state publisher gui if true'), 
         robot_state_publisher, 
         rviz_node, 
         joints_publisher_node,
@@ -106,6 +126,7 @@ def generate_launch_description():
         goto_point_node,
         localize_at_point_node,
         map_node,
-        laser_scans_node
+        laser_scans_node,
+        joint_state_slider
         ])
 
