@@ -6,6 +6,12 @@ DataPointsMarker::DataPointsMarker() : Node("map_publisher")
   using namespace std::chrono_literals;
   
   map_pub = this->create_publisher<nav_msgs::msg::OccupancyGrid>("map_grid", 10);
+  // rclcpp::QoS qos_profile = rclcpp::QoS(rclcpp::KeepLast(1)).transient_local();
+  // map_pub = this->create_publisher<nav_msgs::msg::OccupancyGrid>("map_grid", qos_profile);
+  // Uncomment to be able to save map using 
+  // ros2 service call /map_saver/save_map nav2_msgs/srv/SaveMap "{map_topic: map_grid, map_url: my_map, image_format: pgm, map_mode: trinary, free_thresh: 0.25, occupied_thresh: 0.65}"
+  // ros2 lifecycle set /map_server {arg}
+  
   fa_pub = this->create_publisher<visualization_msgs::msg::MarkerArray>("f_areas", 10);
 
   set_forbidden_area_params();
